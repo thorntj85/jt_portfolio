@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
+	color: white;
+
+	// Nanum gothic | PT Sans Narrow
+}
+
+$color-primary: #7efeff;
+
+.homepage__nav {
+	width: 100vw;
+	height: 10vh;
+	position: fixed;
+
+	border-top: 0.01rem solid white;
+
+	background-color: rgba(33, 33, 33, 0.5);
+
+	&-links,
+	a,
+	.paths-hp {
+		display: flex;
+		height: inherit;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&-path {
+		width: 25%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		letter-spacing: 0.05rem;
+		font-size: 1.35rem;
+
+		@media (max-width: 700px) {
+			border-top: 0.25rem solid $color-primary;
+			font-size: 1.2rem;
+		}
+
+		@media (max-width: 600px) {
+			font-size: 1.1rem;
+		}
+
+		@media (max-width: 425px) {
+			font-size: 0.9rem;
+		}
+
+		&:hover {
+			background-color: rgba(33, 33, 33, 0.75);
+
+			border-top: 0.25rem solid $color-primary;
+
+			.title {
+				transition: ease 0.75s;
+				transform: rotateY(0);
+			}
+		}
+	}
+}
+
+.fas,
+.fab {
+	margin-right: 1.3rem;
+	font-size: 2.5rem;
+
+	@media (max-width: 700px) {
+		font-size: 2.2rem;
+	}
+
+	@media (max-width: 600px) {
+		display: none;
+	}
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	transform: rotateY(90deg);
+
+	@media (max-width: 600px) {
+		transform: none;
+	}
+}

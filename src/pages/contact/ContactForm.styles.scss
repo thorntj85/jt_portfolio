@@ -1,0 +1,96 @@
+$color-primary: #7efeff;
+$color-secondary: #19f6e8;
+$color-tertiary: #47cf73;
+
+.form__inputs {
+	&-small {
+		display: flex;
+		text-align: center;
+
+		height: 2.3rem;
+		width: 25rem;
+
+		margin-bottom: 1.5rem;
+
+		color: grey;
+		font-size: 0.85rem;
+
+		@media (max-width: 1100px) {
+			width: 20rem;
+		}
+
+		@media (max-width: 900px) {
+			width: 15rem;
+		}
+		@media (max-width: 600px) {
+			width: 10rem;
+		}
+
+		&:focus {
+			outline: 0;
+			border: 0.1rem solid $color-secondary;
+		}
+	}
+
+	&-large {
+		display: flex;
+		text-align: center;
+
+		padding-left: 0.1rem;
+		padding-top: 0.1rem;
+
+		height: 10rem;
+		width: 25rem;
+
+		margin-bottom: 1.5rem;
+
+		color: grey;
+		font-size: 0.85rem;
+
+		@media (max-width: 1100px) {
+			width: 20rem;
+		}
+
+		@media (max-width: 900px) {
+			width: 15rem;
+		}
+		@media (max-width: 600px) {
+			width: 10rem;
+		}
+
+		&:focus {
+			outline: 0;
+			border: 0.1rem solid $color-secondary;
+		}
+	}
+
+	&-btn {
+		height: 2.3rem;
+		width: 12.5rem;
+
+		font-size: 1.1rem;
+		text-shadow: 11rem 11rem 11rem black;
+
+		background-color: $color-secondary;
+
+		&:hover {
+			background-color: rgba($color: $color-secondary, $alpha: 0.9);
+			cursor: pointer;
+		}
+
+		&:focus {
+			outline: 0;
+			border: 0.17rem solid white;
+		}
+	}
+}
+
+.center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	margin-bottom: 1.5rem;
+}

@@ -1,0 +1,204 @@
+$color-primary: #7efeff;
+
+.homepage {
+	&__container {
+		display: flex;
+		flex-direction: row;
+		width: 100vw;
+		height: 65vh;
+		align-items: center;
+		justify-content: center;
+
+		&-showcase {
+			font-size: 3.5rem;
+			letter-spacing: 0.1rem;
+			text-shadow: 0.5px 0.5px 1.5px white;
+
+			animation: fadeIn ease-in 1s;
+
+			@media (max-width: 900px) {
+				font-size: 3rem;
+				letter-spacing: 0.1rem;
+				text-shadow: 0.5px 0.5px 1.5px white;
+			}
+
+			@media (max-width: 700px) {
+				font-size: 2.7rem;
+				letter-spacing: 0.1rem;
+				text-shadow: 0.5px 0.5px 1.5px white;
+			}
+
+			@media (max-width: 600px) {
+				font-size: 2.5rem;
+				letter-spacing: 0.1rem;
+				text-shadow: 0.5px 0.5px 1.5px white;
+			}
+
+			@media (max-width: 550px) {
+				font-size: 2.2rem;
+				letter-spacing: 0.08rem;
+				text-shadow: 0.5px 0.5px 1.5px white;
+			}
+
+			@media (max-width: 400px) {
+				letter-spacing: 0.3rem;
+				font-size: 1.7rem;
+			}
+		}
+
+		&-title {
+			width: 100vw;
+			height: 5vh;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+
+			font-size: 1.2rem;
+			letter-spacing: 0.25rem;
+			text-shadow: 0.1rem 0.1rem 3.5rem white;
+
+			@media (max-width: 900px) {
+				font-size: 1.1rem;
+				letter-spacing: 0.2rem;
+				text-shadow: 0.1rem 0.1rem 2.5rem white;
+
+				padding-top: 2rem;
+			}
+
+			@media (max-width: 550px) {
+				font-size: 1.1rem;
+				letter-spacing: 0.15rem;
+				text-shadow: 0.1rem 0.1rem 2.5rem white;
+			}
+
+			@media (max-width: 400px) {
+				letter-spacing: 0.1rem;
+				font-size: 0.9rem;
+			}
+		}
+
+		&-skills {
+			width: 100vw;
+			height: 20vh;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+
+			letter-spacing: 0.75rem;
+			font-size: 1rem;
+			text-shadow: 0.1rem 0.1rem 3.5rem white;
+
+			animation: accordian linear 1s;
+
+			@media (max-width: 900px) {
+				padding-top: 1rem;
+
+				letter-spacing: 0.5rem;
+				font-size: 0.9rem;
+
+				animation: none;
+			}
+
+			@media (max-width: 550px) {
+				letter-spacing: 0.3rem;
+				font-size: 0.8rem;
+
+				animation: none;
+			}
+
+			@media (max-width: 400px) {
+				letter-spacing: 0.2rem;
+				font-size: 0.7rem;
+
+				animation: none;
+			}
+		}
+	}
+}
+
+.neon {
+	font-size: 4.75rem;
+	color: $color-primary;
+
+	text-shadow: 0 -40px 100px, 0 0 20px, 0 0 1em $color-primary,
+		0 0 0.5em $color-primary, 0 0 0.1em $color-primary, 0 500px 300px #000;
+
+	animation: blink linear 2s;
+
+	@media (max-width: 900px) {
+		font-size: 4.5rem;
+	}
+
+	@media (max-width: 700px) {
+		font-size: 4.35rem;
+	}
+
+	@media (max-width: 600px) {
+		font-size: 3.8rem;
+	}
+
+	@media (max-width: 550px) {
+		font-size: 3.6rem;
+	}
+
+	@media (max-width: 425px) {
+		display: none;
+	}
+}
+
+// Animations
+
+@keyframes blink {
+	78% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+	79% {
+		color: #333;
+	}
+	80% {
+		text-shadow: none;
+	}
+	81% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+	82% {
+		color: #333;
+		text-shadow: none;
+	}
+	83% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+	92% {
+		color: #333;
+		text-shadow: none;
+	}
+	93% {
+		color: inherit;
+		text-shadow: inherit;
+	}
+}
+
+@keyframes accordian {
+	0% {
+		letter-spacing: 0.4rem;
+	}
+
+	100% {
+		letter-spacing: 0.75rem;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0.05;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
