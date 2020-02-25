@@ -34,7 +34,7 @@ export class ContactForm extends Component {
 			<form onSubmit={this.handleSubmit} className='center'>
 				<h1>Get in touch</h1>
 				<p>
-					<label style={{ color: "red" }}>
+					<label>
 						<input
 							className='form__inputs-small'
 							type='text'
@@ -46,7 +46,7 @@ export class ContactForm extends Component {
 					</label>
 				</p>
 				<p>
-					<label style={{ color: "red" }}>
+					<label>
 						<input
 							className='form__inputs-small'
 							type='email'
