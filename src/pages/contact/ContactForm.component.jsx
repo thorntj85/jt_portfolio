@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import history from "../../history";
 
 import "./ContactForm.styles.scss";
 
@@ -20,7 +21,11 @@ export class ContactForm extends Component {
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
 			body: encode({ "form-name": "contact", ...this.state })
 		})
-			.then(() => alert("Success!"))
+			.then(() =>
+				alert(
+					"Thanks! I'll get back to you in due course. Click anywhere outside of the form to return to the site."
+				)
+			)
 			.catch((error) => alert(error));
 
 		e.preventDefault();
@@ -32,7 +37,18 @@ export class ContactForm extends Component {
 		const { name, email, message } = this.state;
 		return (
 			<form onSubmit={this.handleSubmit} className='center'>
-				<h1>Get in touch</h1>
+				<div className='form-header'>
+					<div className='form__header-button'>
+						<i
+							className='far fa-arrow-alt-circle-left form__header-close'
+							onClick={() => history.goBack()}
+						></i>
+					</div>
+					<div className='form__header-title'>
+						<h1>Get in touch</h1>
+					</div>
+					<div className='form__header-blank'></div>
+				</div>
 				<p>
 					<label>
 						<input

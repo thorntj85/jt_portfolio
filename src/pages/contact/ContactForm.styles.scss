@@ -2,6 +2,58 @@ $color-primary: #7efeff;
 $color-secondary: #19f6e8;
 $color-tertiary: #47cf73;
 
+.form__header {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	&-button {
+		width: 5rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	&-close {
+		height: 3vh;
+		width: 3vh;
+		color: $color-primary;
+		font-size: 3rem;
+
+		position: sticky;
+
+		animation: fadeIn ease-in 1.25s;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		@media (max-width: 1250px) {
+			// padding-left: 3.5rem;
+			// padding-bottom: 3.5rem;
+			display: none;
+		}
+	}
+
+	&-title {
+		width: 45rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		h1 {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&-blank {
+		width: 5rem;
+	}
+}
+
 .form__inputs {
 	&-small {
 		display: flex;
@@ -89,8 +141,15 @@ $color-tertiary: #47cf73;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	// padding-bottom: 3rem;
 }
 
-h1 {
-	margin-bottom: 1.5rem;
+@keyframes fadeIn {
+	0% {
+		opacity: 0.05;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
