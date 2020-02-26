@@ -14,7 +14,7 @@ class HomeIcon extends Component {
 
 		return history ? (
 			<div className='paths-hp' onClick={this.redirectToHome}>
-				<i class='fas fa-home'></i> <span className='title'>Home</span>
+				<i className='fas fa-home'></i> <span className='title'>Home</span>
 			</div>
 		) : (
 			<div>Unable to redirect</div>
